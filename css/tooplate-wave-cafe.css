@@ -73,7 +73,7 @@ h2 { margin-top: 0; }
 
 .tm-site-header {
     background-color: white;
-    color: #099;
+    color: #FF0BAB;
     width: 100%;
     height: 160px; 
     display: flex;
@@ -105,7 +105,7 @@ h2 { margin-top: 0; }
     min-width: 240px;
     height: 100px;
     background-color: white;
-    color: #099;
+    color: #FF0BAB;
     display: flex;
     text-decoration: none;
     align-items: center;      
@@ -114,7 +114,7 @@ h2 { margin-top: 0; }
 
 .tm-page-link:hover,
 .tm-page-link.active {
-    background-color: #099;
+    background-color: #FF0BAB ;
     color: white;
 }
 
@@ -168,7 +168,7 @@ h2 { margin-top: 0; }
     margin-right: 20px;
     width: 160px;
     height: 160px;
-    background-color: #099;
+    background-color: #FF0BAB ;
 }
 
 .tm-list-item-img-big {
@@ -270,7 +270,7 @@ h2 { margin-top: 0; }
 .tm-form-control::placeholder { color: white; }
 
 .tm-btn-primary {
-    color: #099;
+    color: #FF0BAB;
     background-color: white;
     border: 0;
     padding: 12px 40px;
@@ -281,7 +281,7 @@ h2 { margin-top: 0; }
 
 .tm-btn-primary:hover {
     color: white;
-    background-color: #099;
+    background-color: #FF0BAB ;
 }
 
 .tm-align-right {

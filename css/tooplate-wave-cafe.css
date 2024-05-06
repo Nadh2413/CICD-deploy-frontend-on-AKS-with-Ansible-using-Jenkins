@@ -151,8 +151,8 @@ h2 { margin-top: 0; }
 
 .tm-drinks-nav > ul > li a.active,
 .tm-drinks-nav > ul > li a:hover {
-    color: #96FEFF;
-    border-bottom: 4px solid #96FEFF;
+    color: #FF0BAB;
+    border-bottom: 4px solid #FF0BAB;
 }
 
 .tm-list-item {
@@ -190,7 +190,7 @@ h2 { margin-top: 0; }
     margin-top: 0;
 }
 
-.tm-list-item-price { color: #96FEFF; }
+.tm-list-item-price { color: #FF0BAB; }
 .tm-site-footer { margin-top: 15px; }
 
 .tm-footer-text {
@@ -202,7 +202,7 @@ h2 { margin-top: 0; }
 .tm-tab-content { animation: fadeEffect 1s; }
 .tm-page-content { animation: fadeEffect 1s; }
 
-.tm-text-primary { color: #3CC; }
+.tm-text-primary { color: #FF0BAB; }
 .tm-mb-20 { margin-bottom: 20px; }
 .tm-mb-30 { margin-bottom: 30px; }
 .tm-img-right { 

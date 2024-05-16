@@ -1,0 +1,12 @@
+---
+- hosts: aks
+
+  tasks:
+    - name: deploy app on aks
+      command: kubectl apply -f 1.deploy-cafe-app.yml
+
+    - name: deploy service loadbalancer
+      command: kubectl apply -f 2.service-cafe-app.yml
+
+    - name: update when changes
+      command: kubectl rollout restart deployment.apps/cafe-app-deployment

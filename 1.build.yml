@@ -1,0 +1,22 @@
+---
+- hosts: ansible
+
+  tasks:
+  - name: clone repository
+    git:
+      repo: https://github.com/Nadh2413/cafe-app.git
+      dest: /project/cafe-app
+      clone: yes
+      update: yes
+
+  - name: delete images old
+    command: docker rmi -f cdhuan1003/cafe-app:latest
+
+  - name: create docker image
+    command: docker build -t cdhuan1003/cafe-app:latest /project/cafe-app
+    args:
+     chdir: /project
+
+
+  - name: push docker dockerhub
+    command: docker push cdhuan1003/cafe-app:latest

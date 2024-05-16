@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage('Infor') {
+            steps {
+                sh 'pwd'
+                sh 'whoami'
+                sh 'sudo -u ansibleadmin ls; sudo -u ansibleadmin whoami'
+            }
+        }
+        stage('Build') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/Nadh2413/cafe-app.git']])
+                sh 'sudo -u ansibleadmin ansible-playbook /project/1.build.yml'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'sudo -u ansibleadmin ansible-playbook /project/3.deploy.yml'
+                script {
+                    sleep(2)
+                }
+            }
+        }
+        stage('Alert') {
+            steps {
+                sh 'sudo -u ansibleadmin python3 /project/2.alert_telegram.py'
+            }
+        }
+    }
+}
